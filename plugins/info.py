@@ -59,7 +59,8 @@ async def get_movie(bot, update, name):
             pass
     keyboard.append(JOIN_BUTTONS)
     await update.reply_text(
-        text="Select required option",
+        text="Select Your Movie In Below Button 👇
+〽️ Powered by @umlinks",
         reply_markup=InlineKeyboardMarkup(keyboard),
         disable_web_page_preview=True,
         quote=True
@@ -68,20 +69,20 @@ async def get_movie(bot, update, name):
 
 def description(movie):
     set = []
-    if movie['title']:
+    if movie['title']
         set.append(movie['title'])
     if movie['type']:
         set.append(movie['type'].capitalize())
     if movie['release_year']:
         set.append(str(movie['release_year']))
-    description = " | ".join(set)
+    description = "╏".join(set)
     return description
 
 
 def info(movie):
-    info = f"**Title:** `{movie['title']}`\n"
+    info = f"**Movie Name :** `{movie['title']}`\n"
     try:
-        info += f"**Type:** `{movie['type'].capitalize()}`\n"
+        info += f"**Movie\Series:** `{movie['type'].capitalize()}`\n"
     except:
         pass
     try:
@@ -95,7 +96,7 @@ def info(movie):
     try:
         if movie['score']:
             scores = movie['score']
-            info += "**Score:** "
+            info += "**Rate :** "
             score_set = []
             for score in scores:
                 score_set.append(f"{score.upper()} - `{str(scores[score])}`")
@@ -104,7 +105,7 @@ def info(movie):
         pass
     try:
         if movie['providers']:
-            info += "**Providers:** "
+            info += "**Provided by :** "
             providers = movie['providers']
             provider_set = []
             for provider in providers:
