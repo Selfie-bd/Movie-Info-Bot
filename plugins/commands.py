@@ -5,16 +5,15 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from plugins.info import *
 
 START_TEXT = """Hello {}
-I am a movie information finder bot.
 
 > `I can find information of all movies.`
 
-Made by @FayasNoushad"""
+Made by @umlinks"""
 
 JOIN_BUTTONS = [
     InlineKeyboardButton(
-        text='⚙ Join Updates Channel ⚙',
-        url='https://telegram.me/FayasNoushad'
+        text='⚙ Join Our Movie Channel ⚙',
+        url='https://telegram.me/umlinks'
     )
 ]
 
